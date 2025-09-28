@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DSA Tracker</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+    <style>
+      .form-container {
+        max-width: 500px;
+        margin: auto;
+        margin-top: 50px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+      }
+    </style>
+  </head>
+  <body class="bg-light">
+    <div class="container">
+      <div class="form-container">
+        <h4 class="text-center mb-4">DSA Tracker</h4>
+        <form id="submit-to-google-sheet">
+          <div class="form-group">
+            <label for="topic">Topic:</label>
+            <input
+              class="form-control"
+              type="text"
+              name="Topic"
+              id="topic"
+              placeholder="Topic"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="problem">Problem:</label>
+            <input
+              class="form-control"
+              type="text"
+              name="Problem"
+              id="problem"
+              placeholder="Problem"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="level">Level:</label>
+            <input
+              class="form-control"
+              type="text"
+              name="Level"
+              id="level"
+              placeholder="Level"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="site">Site Link:</label>
+            <input
+              class="form-control"
+              type="text"
+              name="Site"
+              id="site"
+              placeholder="Site"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="status">Status :</label>
+            <input
+              class="form-control"
+              type="text"
+              name="Status"
+              id="status"
+              placeholder="Status"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="date">Date Solved :</label>
+            <input
+              class="form-control"
+              type="date"
+              name="Date"
+              id="date"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="notes">Notes/Link : </label>
+            <input
+              class="form-control"
+              type="text"
+              name="Notes"
+              id="notes"
+              placeholder="Notes or Link"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbztEWi8srNIW_woswXIvZ9goJK8Bcrjx5ZMH2ZwzTyHlZhCXvV5n730g8jwL9_jItXm/exec";
+
+      const form = document.forms["submit-to-google-sheet"];
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        var formData = new FormData(form);
+
+        fetch(scriptURL, { method: "POST", body: formData })
+          .then((response) => {
+            swal("Done", "Problem Added Successfully.", "success");
+            form.reset(); 
+          })
+          .catch((error) => {
+            swal("Error", "Something went wrong. Please try again!", "error");
+          });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+/* Body background and font */
+body {
+  background: #f4f7f8;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Form container */
+.form-container {
+  max-width: 550px;
+  margin: 60px auto;
+  padding: 30px 25px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.form-container:hover {
+  transform: translateY(-5px);
+}
+
+/* Form heading */
+.form-container h4 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #343a40;
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+/* Labels */
+.form-group label {
+  font-weight: 500;
+  color: #495057;
+}
+
+/* Inputs */
+.form-control {
+  border-radius: 8px;
+  padding: 10px 12px;
+  border: 1px solid #ced4da;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.form-control:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+}
+
+/* Button style */
+.btn-primary {
+  background: #4a90e2;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 0;
+  font-weight: 500;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn-primary:hover {
+  background: #357ab8;
+  transform: translateY(-2px);
+}
+
+/* Responsive spacing */
+@media (max-width: 576px) {
+  .form-container {
+    padding: 20px 15px;
+  }
+}
+
+/* SweetAlert overrides (optional) */
+.swal2-popup {
+  font-size: 1.05rem !important;
+}
