@@ -39,7 +39,7 @@ Easily log topics, problems, difficulty levels, status, dates, and notes/links t
 
 1. **Clone this repository:**
    ```bash
-   git clone https://github.com/yourusername/DSA-Tracker-WebApp.git
+   git clone https://github.com/Shimanshuco/DSA-Progress-Tracker.git
 2. **Open your Google Sheet and add headers in row 2:**
    ```bash
     timestamp | Topic | Problem | Level | Site | Status | Date | Notes
