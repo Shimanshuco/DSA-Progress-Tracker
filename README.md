@@ -23,7 +23,11 @@ Easily log topics, problems, difficulty levels, status, dates, and notes/links t
 
 ## Demo
 
-![DSA Tracker Screenshot](screenshot.png)
+![DSA Tracker Screenshot](https://github.com/Shimanshuco/DSA-Progress-Tracker/blob/main/DSA%20Tracker%201.png)
+![DSA Tracker Screenshot](https://github.com/Shimanshuco/DSA-Progress-Tracker/blob/main/DSA%20Tracker%202.png)
+
+Excel : 
+![DSA Tracker Screenshot](https://github.com/Shimanshuco/DSA-Progress-Tracker/blob/main/Sheet.png)
 
 ---
 
